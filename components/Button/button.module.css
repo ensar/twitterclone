@@ -1,0 +1,21 @@
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color:#fff;
+    border-radius: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #1A8CD8;
+}
+.btn:disabled{
+    opacity: 0.5;
+    cursor: default;
+}

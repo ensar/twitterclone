@@ -1,0 +1,51 @@
+.nav{
+    width: 268px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    margin-left: 7px;
+}
+.nav .head{
+    padding: 13px 14px;
+}
+.nav .head svg{
+    border-radius: 50%;
+    transition: 400ms;
+}
+.nav .head svg:hover{
+    background-color: #031018;
+}
+.menu{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.menuItem{
+    width: 100%;
+    height: 50px;
+    transition: 400ms;
+    cursor: pointer;
+    
+}
+.menuItem:hover .item{
+    background-color: #181818;
+}
+
+.menuItem .item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 26px;
+    height:100%;
+    width: max-content;
+    padding: 15px 18px 15px 15px ;
+}
+.menuItem span{
+    margin-left: 22px;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 4px;
+    color: var(--gray);
+}

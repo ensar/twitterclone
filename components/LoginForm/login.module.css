@@ -1,0 +1,39 @@
+.login{
+    width: 59vw;
+    display: flex;
+    flex-direction: column;
+    padding: 36px 40px;
+}
+.login h1{
+    font-size: 68px;
+    width: 450px;
+}
+.login h3{
+    font-size: 35px;
+    margin-top: 0px;
+}
+.login button{
+    width: 298px;
+    height: 38px;
+    background-color: #fff;
+    border-radius: 1rem;
+    color: #3c4043;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:500px){
+    .login h1{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .login{
+        width: 100vw;
+    }
+}

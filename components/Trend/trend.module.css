@@ -1,0 +1,53 @@
+.container{
+    width: 348px;
+    height: 920px;
+    margin:0 0 16px 30px;
+    background-color: var(--sidebarbg);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.container h1{
+    font-size: 20px;
+    margin: 0;
+    color: var(--gray);
+    font-weight: 700;
+    padding: 12px 16px;
+    
+}
+.trendItem{
+    width: 100%;
+    height: 82px;
+    padding: 12px 16px;
+    transition: 400ms;
+    cursor: pointer;
+}
+.trendItem:hover{
+    background-color: var(--sidebarhover);
+}
+.trendHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.trendItem span{
+    font-size: 13px;
+    color:var(--textgray);
+    font-weight: 400;
+    letter-spacing: -0.4px;
+}
+
+.trendItem p{
+    margin: 0;
+    color:var(--gray);
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+.trendItem:last-child{
+    border-radius: 0 0 16px 16px;
+}
+.trendItem .more{
+    font-size: 15px;
+    color:var(--primary)
+}

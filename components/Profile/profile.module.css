@@ -1,0 +1,43 @@
+.profile{
+    width:240px;
+    height:64px;
+    position: absolute;
+    bottom: 12px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 12px 12px 12px 4px;
+    right: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 400ms;
+}
+.profile:hover{
+    background-color: #181818;
+}
+.profile .user{
+    display: flex;
+    align-items: center;
+}
+.profile .user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.profile .user .userInfo{
+    margin-left: 10px;
+}
+.profile .user .userInfo h4{
+    margin: 0;
+    
+}
+.profile .user .userInfo span{
+    color:var(--textgray);
+    font-size: 15px;
+}
+.profile > div:nth-child(2){
+    font-size: 28px;
+    display: flex;
+    height: 60px;
+    color:var(--gray)
+}
