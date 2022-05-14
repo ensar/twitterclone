@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { UserContext } from "../../pages";
+import { DataContext } from "../../pages";
 import EarthIcon from "../../assets/icons/EarthIcon";
 import MediaIcon from "../../assets/icons/MediaIcon";
 import GifIcon from "../../assets/icons/GifIcon";
@@ -10,9 +10,23 @@ import LocationIcon from "../../assets/icons/LocationIcon";
 import Button from "../Button";
 import styles from "./newTweet.module.css";
 
-const NewTweet = () => {
+const NewTweet = ({ setTweets }) => {
   const [tweet, setTweet] = useState();
-  const user = useContext(UserContext);
+  const { user, tweets } = useContext(DataContext);
+
+  const onSubmit = () => {
+    const newTweet = {
+      user: user.name.replace(" ", ""),
+      username: user.name,
+      profile: user.image,
+      date: new Date().getDate() + " " + new Date().toString().split(" ")[1],
+      content: tweet,
+      comment: "",
+      retweet: "",
+      like: "1",
+    };
+    setTweets([newTweet, ...tweets]);
+  };
   return (
     <div className={styles.newTweet}>
       <div className={styles.row}>
@@ -47,7 +61,11 @@ const NewTweet = () => {
             <PlanIcon />
             <LocationIcon />
           </div>
-          {tweet ? <Button w='90' h='36' /> : <Button w='90' h='36' disable />}
+          {tweet ? (
+            <Button w='90' h='36' onClick={onSubmit} />
+          ) : (
+            <Button w='90' h='36' disable />
+          )}
         </div>
       </div>
     </div>

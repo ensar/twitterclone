@@ -5,19 +5,25 @@ import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
 import styles from "../styles/home.module.css";
 import { createContext } from "react";
-export const UserContext = createContext();
+import { tweets as t } from "../data";
+import { useState } from "react";
+
+export const DataContext = createContext();
+
 export default function Home({ user }) {
+  const [tweets, setTweets] = useState(t);
+  const data = { tweets, user };
   return (
     <div className={styles.homeContainer}>
       <Head>
         <title>Anasayfa / Twitter</title>
         <link rel='icon' href='https://abs.twimg.com/favicons/twitter.2.ico' />
       </Head>
-      <UserContext.Provider value={user}>
+      <DataContext.Provider value={data}>
         <Nav />
-        <Main />
+        <Main setTweets={setTweets} />
         <Sidebar />
-      </UserContext.Provider>
+      </DataContext.Provider>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { UserContext } from "../../pages";
+import { DataContext } from "../../pages";
 import styles from "./profile.module.css";
 const Profile = () => {
-  const user = useContext(UserContext);
+  const { user } = useContext(DataContext);
   const username = user.name.replace(" ", "");
   return (
     <div className={styles.profile}>
